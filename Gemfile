@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
+
 ruby '2.0.0'
+
 gem 'rails', '4.0.2'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -12,7 +13,7 @@ gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'devise'
 gem 'devise_invitable'
 gem 'figaro'
-group :development do
+group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'hub', :require=>nil
@@ -21,4 +22,6 @@ group :development do
 end
 group :production do
   gem 'thin'
+  gem 'rails_12factor'
+  gem 'pg'
 end
