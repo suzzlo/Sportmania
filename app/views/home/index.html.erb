@@ -1,4 +1,5 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+
+<h3>My Championships</h3>
+<% @championships.each do |championship| %>
+  <p><%=link_to championship.name, championship %></p>
 <% end %>
