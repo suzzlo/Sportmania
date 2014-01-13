@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+
+    if current_user
+      @championships = current_user.championships
+    else
+      @championships = Championship.all
+    end
   end
 end
