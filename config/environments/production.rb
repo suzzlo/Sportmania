@@ -89,4 +89,7 @@ Sportmania::Application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
 
+  config.action_mailer.default_url_options = { :host => 'sportmania.heroku.com' }
+
+
 end
