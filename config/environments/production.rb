@@ -78,5 +78,15 @@ Sportmania::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => 'sportmania.herokuapp.com' }
+  ActionMailer::Base.smtp_settings = {
+      :port =>           '587',
+      :address =>        'smtp.mandrillapp.com',
+      :user_name =>      ENV['app21224386@heroku.com'],
+      :password =>       ENV['yOXmZ22-RFpoBH5H4sq6pA'],
+      :domain =>         'heroku.com',
+      :authentication => :plain
+  }
+
+  ActionMailer::Base.delivery_method = :smtp
+
 end
