@@ -83,7 +83,7 @@ Sportmania::Application.configure do
       :address =>        'smtp.mandrillapp.com',
       :user_name =>      ENV['app21224386@heroku.com'],
       :password =>       ENV['yOXmZ22-RFpoBH5H4sq6pA'],
-      :domain =>         'heroku.com',
+      :domain =>         'sportmania.herokuapp.com',
       :authentication => :plain
   }
 
